@@ -67,7 +67,6 @@ class Search extends React.Component {
         <div>
           {clicou && (
             <div>
-
               { resultado.length === 0 ? <h3>Nenhum álbum foi encontrado</h3>
                 : (
                   <div>
@@ -78,6 +77,7 @@ class Search extends React.Component {
                           <Link
                             to={ `/album/${album.collectionId}` }
                             data-testid={ `link-to-album-${album.collectionId}` }
+                            album={ album.collectionId }
                           >
                             <img
                               src={ album.artworkUrl100 }
