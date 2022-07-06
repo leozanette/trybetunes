@@ -20,11 +20,8 @@ class Album extends React.Component {
 
    pegarMusicas = async () => {
      const { match: { params: { id } } } = this.props;
-     console.log(id);
      const result = await getMusics(id);
      const song = result.filter((a) => a.kind === 'song');
-     console.log(result);
-     console.log(song);
      this.setState({
        album: result[0],
        songs: song,
@@ -44,8 +41,10 @@ class Album extends React.Component {
              { songs.map((musica) => (
                <MusicCard
                  key={ musica.trackId }
+                 trackId={ musica.trackId }
                  trackName={ musica.trackName }
                  previewUrl={ musica.previewUrl }
+                 object={ musica }
                />
 
              )) }

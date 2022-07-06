@@ -25,8 +25,6 @@ class Search extends React.Component {
       { artista: search, clicou: true },
       async () => {
         const albuns = await searchAlbumsAPI(search);
-        console.log(search);
-        console.log(albuns);
         this.setState(
           {
             search: '',
