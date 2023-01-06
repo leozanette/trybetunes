@@ -44,12 +44,7 @@ class MusicCard extends React.Component {
   pegarFavoritas = async () => {
     const { trackId } = this.props;
     const favoritas = await getFavoriteSongs();
-    this.setState(
-      // { favoritas: favoritas },
-      () => {
-        this.setState({ checked: favoritas.some((a) => a.trackId === trackId) });
-      },
-    );
+    this.setState({ checked: favoritas.some((a) => a.trackId === trackId) });
   }
 
   render() {
