@@ -6,7 +6,7 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <p>TrybeTunes</p>
+        <h1>TrybeTunes</h1>
         <Content />
       </BrowserRouter>
     );
