@@ -41,13 +41,14 @@ class Login extends React.Component {
           ? (
             <form>
               <label htmlFor="login">
-                Nome
+                Nome completo:
                 <input
                   type="text"
                   name="login"
                   data-testid="login-name-input"
                   value={ login }
                   onChange={ this.onInputChange }
+                  placeholder="digite seu nome..."
                 />
               </label>
               <button
