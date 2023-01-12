@@ -73,7 +73,7 @@ class Search extends React.Component {
                       { resultado.map((album, index) => (
                         <div key={ index }>
                           <Link
-                            to={ `/album/${album.collectionId}` }
+                            to={ `/trybetunes/album/${album.collectionId}` }
                             data-testid={ `link-to-album-${album.collectionId}` }
                             album={ album.collectionId }
                           >
