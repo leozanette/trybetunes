@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 
 class Search extends React.Component {
@@ -41,7 +40,7 @@ class Search extends React.Component {
     const minLength = 2;
     return (
       <div data-testid="page-search">
-        <Header />
+        {/* <Header /> */}
         <form>
 
           <input
@@ -69,9 +68,9 @@ class Search extends React.Component {
                 : (
                   <div>
                     <h3>{ `Resultado de álbuns de: ${artista}`}</h3>
-                    <section>
+                    <section className="cards">
                       { resultado.map((album, index) => (
-                        <div key={ index }>
+                        <div key={ index } className="card">
                           <Link
                             to={ `/trybetunes/album/${album.collectionId}` }
                             data-testid={ `link-to-album-${album.collectionId}` }

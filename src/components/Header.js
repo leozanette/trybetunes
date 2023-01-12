@@ -16,6 +16,10 @@ class Header extends React.Component {
     this.pegarUsuario();
   }
 
+  componentDidUpdate() {
+    this.pegarUsuario();
+  }
+
   async pegarUsuario() {
     const user = await getUser();
     console.log(user);
@@ -30,18 +34,24 @@ class Header extends React.Component {
     return (
 
       <header data-testid="header-component">
-        <h4 data-testid="header-user-name">{ loading ? usuario.name : <Loading /> }</h4>
-        <nav>
-          <Link to="/trybetunes/search" data-testid="link-to-search">Pesquisar</Link>
-          <Link
-            to="/trybetunes/favorites"
-            data-testid="link-to-favorites"
-          >
-            Favoritas
+        <div>
+          <h1>TrybeTunes</h1>
+        </div>
+        <div>
 
-          </Link>
-          <Link to="/trybetunes/profile" data-testid="link-to-profile">Perfil</Link>
-        </nav>
+          <h2 data-testid="header-user-name">{ loading ? usuario.name : <Loading /> }</h2>
+          <nav>
+            <Link to="/trybetunes/search" data-testid="link-to-search">Pesquisar</Link>
+            <Link
+              to="/trybetunes/favorites"
+              data-testid="link-to-favorites"
+            >
+              Favoritas
+
+            </Link>
+            <Link to="/trybetunes/profile" data-testid="link-to-profile">Perfil</Link>
+          </nav>
+        </div>
 
       </header>
     );

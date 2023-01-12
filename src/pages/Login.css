@@ -1,8 +1,8 @@
 form {
   display: flex;
   justify-content: center;
-  margin: 200px;
-  height: 300px;
+  margin: 100px;
+  /* height: 300px; */
   align-items: center;
   flex-direction: column;
 }
