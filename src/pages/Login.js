@@ -34,7 +34,7 @@ class Login extends React.Component {
   render() {
     const { login, loading, redirect } = this.state;
     const minLength = 3;
-    if (redirect) return (<Redirect to="/search" />);
+    if (redirect) return (<Redirect to="/trybetunes/search" />);
     return (
       <div data-testid="page-login">
         { loading
